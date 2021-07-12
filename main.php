@@ -33,7 +33,7 @@
                                                 </th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="table-body">
                                                 <?php
                                                 $query = "SELECT * FROM expedientes";
                                                 $result = mysqli_query($conn, $query);

@@ -14,7 +14,7 @@ Documentación perteneciente al control maestro.
 
 ## -- Pantalla "Recepción" --
 ##### Vista base
-![Concept admin dashboard template preview](imgdocs\isai_rpppc.png)
+![Concept admin dashboard template preview](imgdocs\recepcion.png)
 
 > Tabla Expedientes
 

@@ -1,4 +1,5 @@
-<?php include "includes/db.php"?>
+<?php include "includes/db.php" ?>
+<?php include "includes/functions.php" ?>
 <?php include "includes/header.php" ?>
 
 <!-- ============================================================== -->
@@ -10,7 +11,7 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
 
-               <div class="card">
+                <div class="card">
                     <div class="card-body">
 
                         <div class="container-fluid">
@@ -20,55 +21,94 @@
                                         <thead>
                                             <tr>
                                                 <th>
-                                                    #
+                                                    Apertura Exp.
                                                 </th>
                                                 <th>
-                                                    Product
+                                                    No. Expediente
                                                 </th>
                                                 <th>
-                                                    Payment Taken
+                                                    Acto Juridico
                                                 </th>
                                                 <th>
-                                                    Status
+                                                    Asignado
+                                                </th>
+                                                <th>
+                                                    Referencia
+                                                </th>
+                                                <th>
+                                                    No. Instrumento
+                                                </th>
+                                                <th>
+                                                    Fecha Ultima Firma
+                                                </th>
+                                                <th>
+                                                    Observaciones
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                                <?php
-                                                $query = "SELECT * FROM expedientes";
-                                                $result = mysqli_query($conn, $query);
-                                                while ($row = mysqli_fetch_array($result)) {
-                                                ?>
-                                            <tr>
-                                                <td>
-                                                    <?php echo $row['Escritura']?>
-                                                </td>
-                                                <td>
-                                                    <?php echo $row['Operacion']?>
-                                                </td>
-                                                <td>
-                                                    <?php echo $row['Fecha']?>
-                                                </td>
-                                                <td>
-                                                    <?php echo $row['Volumen']?>
-                                                </td>
-                                            </tr>
+                                            <?php
+                                            $query = "SELECT * FROM expedientes E LEFT JOIN otorgantes D ON E.Expediente = D.Expediente GROUP BY E.Expediente ORDER BY E.Escritura DESC";
+                                            $result = mysqli_query($conn, $query);
+                                            while ($row = mysqli_fetch_array($result)) {
+                                            ?>
+                                                <tr>
+                                                    <form method="POST">
+                                                        <td>
+                                                            <?php echo ajustarFechaEs($row['Fecha']) ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $row['Expediente'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo utf8_encode($row['Des_Operacion']) ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo utf8_encode($row['Des_Responsable']) ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo utf8_encode($row['Nombre']) ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $row['Escritura'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $row['FechaFirma'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $row['Observacion'] ?>
+                                                        </td>
+                                                    </form>
+                                                </tr>
+
                                             <?php } ?>
-                                      
+
                                         </tbody>
                                         <tfoot>
                                             <tr>
                                                 <th>
-                                                    #
+                                                    Apertura Exp.
                                                 </th>
                                                 <th>
-                                                    Product
+                                                    No. Expediente
                                                 </th>
                                                 <th>
-                                                    Payment Taken
+                                                    Acto Juridico
                                                 </th>
                                                 <th>
-                                                    Status
+                                                    Asignado
+                                                </th>
+                                                <th>
+                                                    Referencia
+                                                </th>
+                                                <th>
+                                                    No. Instrumento
+                                                </th>
+                                                <th>
+                                                    Fecha Ultima Firma
+                                                </th>
+                                                <th>
+                                                    Observaciones
                                                 </th>
                                             </tr>
                                         </tfoot>
@@ -90,8 +130,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    Copyright © 2018 Concept. All rights reserved. Dashboard by <a
-                        href="https://colorlib.com/wp/">Colorlib</a>.
+                    Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <div class="text-md-right footer-links d-none d-sm-block">
