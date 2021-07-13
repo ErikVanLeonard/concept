@@ -14,6 +14,8 @@
                 <div class="card">
                     <div class="card-body">
 
+                    <h1>Recepción</h1>
+
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-12">

@@ -16,6 +16,9 @@ Documentación perteneciente al control maestro.
 ##### Vista base
 ![Concept admin dashboard template preview](imgdocs\recepcion.png)
 
+Esta pantalla mostrara la información capturada en la pantalla “alta de expediente” de atinet, pero se pretende que se puedan realizar modificaciones de cualquier campo de los que no tienen relleno en gris y que se grabe de nuevo en atinet y solo podrá ser utilizada por recepción.
+
+
 > Tabla Expedientes
 
 

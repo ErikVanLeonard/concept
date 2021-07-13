@@ -16,7 +16,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <table id="myTable" class="table display">
+                                    <table id="myTable" class="table display compact">
                                         <thead>
                                             <tr>
                                                 <th>
