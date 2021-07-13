@@ -28,7 +28,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h1>Recepción</h1>
+                        <h1>Proyectista</h1>
 
                         <div class="container-fluid">
                             <div class="row">
@@ -70,13 +70,13 @@
                                             ?>
                                                 <tr>
                                                     <form method="POST">
-                                                        <td>
+                                                        <td class="bg-info dark">
                                                             <?php echo ajustarFechaEs($row['Fecha']) ?>
                                                         </td>
-                                                        <td>
+                                                        <td class="bg-info">
                                                             <?php echo $row['Expediente'] ?>
                                                         </td>
-                                                        <td>
+                                                        <td class="bg-info">
                                                             <?php echo utf8_encode($row['Des_Operacion']) ?>
                                                         </td>
                                                         <td>

@@ -43,6 +43,9 @@ Esta pantalla mostrara la información capturada en la pantalla “alta de exped
 ##### Vista base
 ![Concept admin dashboard template preview](imgdocs\proyectista.png)
 
+Esta pantalla mostrara la información capturada en la pantalla “alta de expediente” de atinet y mostrar si se trata de un acto juridico considerado actividad vulnerable, si es o no objeto de aviso, el tipo de aviso correspondiente, si lleva o no declaranot , si se inscribe en RPP o no y si lleva isai o no (dando opcion al usuario de modificarlo) adicional se pretende que se pueda capturar, consultar y modificar la informacion que no estan en gris y se grabe en atinet y ser utilizada por los proyectistas
+
+
 >Tabla Expedientes
 
 >> TIpo de declaranot *Campo nuevo*

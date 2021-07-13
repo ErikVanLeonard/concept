@@ -62,7 +62,11 @@ $(document).ready( function () {
                 } );
             },
 
-            responsive: false 
+            responsive: {
+                details: {
+                    type: 'column'
+                }
+            }
     });
 } );
 
